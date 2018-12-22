@@ -14,4 +14,10 @@ html {
 .info {
   background-color: white;
   padding: 3%;
+  font-weight: bold;
+}
+
+.page-header {
+  margin-top: 0px;
+  margin-left: 20px;
 }

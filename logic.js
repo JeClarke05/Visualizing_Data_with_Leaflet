@@ -80,7 +80,7 @@ function createMap(earthquakes) {
     center: [
       37.09, -95.71
     ],
-    zoom: 4,
+    zoom: 3,
     layers: [darkmap, earthquakes]
   });
   // Create a layer control
@@ -91,14 +91,14 @@ function createMap(earthquakes) {
   }).addTo(myMap); 
 
   // Create a legend to display information about our map
-  var legend = L.control({position: 'bottomright'});
+  var legend = L.control({position: 'topright'});
 
   legend.onAdd = function (map) {
     
     var div = L.DomUtil.create('div', 'info legend'),
     grades = [0, 1, 2, 3, 4, 5]
   
-    div.innerHTML+='Magnitude<br><hr>'
+    div.innerHTML+='Magnitude<br>'
     
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
